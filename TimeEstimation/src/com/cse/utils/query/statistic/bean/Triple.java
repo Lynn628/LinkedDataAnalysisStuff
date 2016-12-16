@@ -1,0 +1,45 @@
+package com.cse.utils.query.statistic.bean;
+
+import org.apache.jena.rdf.model.RDFNode;
+
+/**
+ * 对应于三元组
+ * @author chengwenyao
+ *
+ */
+public class Triple {
+	private RDFNode subject;
+	private RDFNode predicate;
+	private RDFNode object;
+	
+	public RDFNode getSubject() {
+		return subject;
+	}
+	public void setSubject(RDFNode subject) {
+		this.subject = subject;
+	}
+	public RDFNode getPredicate() {
+		return predicate;
+	}
+	public void setPredicate(RDFNode predicate) {
+		this.predicate = predicate;
+	}
+	public RDFNode getObject() {
+		return object;
+	}
+	public void setObject(RDFNode object) {
+		this.object = object;
+	}
+	
+	public Triple(RDFNode subject, RDFNode predicate, RDFNode object) {
+		super();
+		this.subject = subject;
+		this.predicate = predicate;
+		this.object = object;
+	}
+	@Override
+	public String toString() {
+		return "Triple [subject=" + subject + ", predicate=" + predicate
+				+ ", object=" + object + "]";
+	}
+}

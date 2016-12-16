@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/LIV/!svn/ver/1/src/com/cse/utils/query/virtuoso/bean
+END
+SingleColumn.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/LIV/!svn/ver/1/src/com/cse/utils/query/virtuoso/bean/SingleColumn.java
+END
+DoubleColumn.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/LIV/!svn/ver/1/src/com/cse/utils/query/virtuoso/bean/DoubleColumn.java
+END
+TripleColumn.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/LIV/!svn/ver/1/src/com/cse/utils/query/virtuoso/bean/TripleColumn.java
+END
