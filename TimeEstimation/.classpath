@@ -67,5 +67,6 @@
 	<classpathentry kind="lib" path="D:/JavaJars/langdetect-09-13-2011/lib/langdetect.jar"/>
 	<classpathentry kind="lib" path="D:/JavaJars/lucene-snowball-3.0.3.jar/lucene-snowball.jar"/>
 	<classpathentry kind="lib" path="D:/JavaJars/lucene-snowball-3.0.3.jar/lucene-snowball-3.0.3.jar"/>
+	<classpathentry kind="src" path="conf"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

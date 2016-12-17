@@ -1,7 +1,5 @@
 package com.cse.utils.query.statistic.bean;
 
-import org.apache.jena.rdf.model.RDFNode;
-
 /**
  * 对应于三元组（主谓宾用String表示）
  * @author chengwenyao

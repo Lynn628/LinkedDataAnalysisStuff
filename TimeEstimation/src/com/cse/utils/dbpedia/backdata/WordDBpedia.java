@@ -9,8 +9,8 @@ import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.Map.Entry;
+import java.util.Set;
 
 import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryExecution;
@@ -20,13 +20,13 @@ import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 
-import virtuoso.jena.driver.VirtuosoQueryExecutionFactory;
-
 import com.cse.utils.query.statistic.DatasetInfo;
 import com.cse.utils.readparam.ReadConfParam;
 import com.cybozu.labs.langdetect.Detector;
 import com.cybozu.labs.langdetect.DetectorFactory;
 import com.cybozu.labs.langdetect.LangDetectException;
+
+import virtuoso.jena.driver.VirtuosoQueryExecutionFactory;
 
 public class WordDBpedia {
 private static DatasetInfo datasetInfo;	

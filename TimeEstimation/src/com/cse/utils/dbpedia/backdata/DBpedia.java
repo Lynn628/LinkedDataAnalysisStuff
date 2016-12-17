@@ -19,14 +19,14 @@ import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 
-import virtuoso.jena.driver.VirtuosoQueryExecutionFactory;
-
 import com.cse.utils.query.statistic.DatasetInfo;
 import com.cse.utils.query.statistic.bean.TripleString;
 import com.cse.utils.readparam.ReadConfParam;
 import com.cybozu.labs.langdetect.Detector;
 import com.cybozu.labs.langdetect.DetectorFactory;
 import com.cybozu.labs.langdetect.LangDetectException;
+
+import virtuoso.jena.driver.VirtuosoQueryExecutionFactory;
 
 public class DBpedia {
 	private static DatasetInfo datasetInfo;	

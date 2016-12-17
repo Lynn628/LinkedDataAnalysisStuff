@@ -1,22 +1,11 @@
 package com.cse.utils.query.statistic;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import virtuoso.jena.driver.VirtDataset;
-
-import com.cse.utils.query.statistic.bean.Triple;
-import com.cse.utils.query.statistic.bean.TripleString;
-import com.cse.utils.query.virtuoso.SparqlQuery;
-import com.cse.utils.query.virtuoso.bean.DoubleColumn;
-import com.cse.utils.query.virtuoso.bean.SingleColumn;
-import com.cse.utils.query.virtuoso.bean.TripleColumn;
-import com.cse.utils.readparam.ReadConfParam;
 import org.apache.jena.ontology.Individual;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
@@ -28,6 +17,16 @@ import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.util.iterator.ExtendedIterator;
+
+import com.cse.utils.query.statistic.bean.Triple;
+import com.cse.utils.query.statistic.bean.TripleString;
+import com.cse.utils.query.virtuoso.SparqlQuery;
+import com.cse.utils.query.virtuoso.bean.DoubleColumn;
+import com.cse.utils.query.virtuoso.bean.SingleColumn;
+import com.cse.utils.query.virtuoso.bean.TripleColumn;
+import com.cse.utils.readparam.ReadConfParam;
+
+import virtuoso.jena.driver.VirtDataset;
 
 /**
  * 获取数据集中的一些基本信息，比如class、instance等

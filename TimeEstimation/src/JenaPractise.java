@@ -60,6 +60,7 @@ public class JenaPractise {
 			   System.out.println("#-- nsA and cat defined");
 			   model.setNsPrefix("cat", nsB);
 			   model.write(System.out);
+			 
 		   }	   
 	   }
 }

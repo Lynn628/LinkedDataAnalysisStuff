@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.jena.query.Query;
-
-import virtuoso.jena.driver.VirtGraph;
-import virtuoso.jena.driver.VirtuosoQueryExecutionFactory;
-
-import com.cse.utils.query.virtuoso.bean.DoubleColumn;
-import com.cse.utils.query.virtuoso.bean.SingleColumn;
-import com.cse.utils.query.virtuoso.bean.TripleColumn;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryFactory;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
+
+import com.cse.utils.query.virtuoso.bean.DoubleColumn;
+import com.cse.utils.query.virtuoso.bean.SingleColumn;
+import com.cse.utils.query.virtuoso.bean.TripleColumn;
+
+import virtuoso.jena.driver.VirtGraph;
+import virtuoso.jena.driver.VirtuosoQueryExecutionFactory;
 
 public class SparqlQuery {
 	private VirtGraph virtGraph;
