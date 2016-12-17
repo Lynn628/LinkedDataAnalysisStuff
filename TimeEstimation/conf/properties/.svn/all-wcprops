@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/LIV/!svn/ver/1/conf/properties
+END
+server.xml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/LIV/!svn/ver/1/conf/properties/server.xml
+END
+constant.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/LIV/!svn/ver/1/conf/properties/constant.xml
+END
+configuration.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/LIV/!svn/ver/1/conf/properties/configuration.xml
+END

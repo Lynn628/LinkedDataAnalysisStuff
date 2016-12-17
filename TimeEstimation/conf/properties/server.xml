@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<!-- 代替server.properties -->
+<properties>
+	<!-- 数据库驱动 -->
+	<entry key="dataSource.driverClassName">com.mysql.jdbc.Driver</entry>
+
+	<entry key="dataSource.url">jdbc:mysql://223.3.80.2:3306/dblp_4_5</entry>
+	<!-- 数据库用户名 -->
+	<entry key="dataSource.username">root</entry>
+	<!-- 数据库密码 -->
+	<entry key="dataSource.password">123456</entry>
+	
+	<entry key="JDBC.DefaultAutoCommit">true</entry>
+</properties>
