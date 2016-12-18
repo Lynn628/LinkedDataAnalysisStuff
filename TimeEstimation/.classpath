@@ -20,7 +20,7 @@
 	<classpathentry kind="lib" path="D:/JavaJars/apache-jena-3.1.1/lib/jena-arq-3.1.1.jar"/>
 	<classpathentry kind="lib" path="D:/JavaJars/apache-jena-3.1.1/lib/jena-base-3.1.1.jar"/>
 	<classpathentry kind="lib" path="D:/JavaJars/apache-jena-3.1.1/lib/jena-cmds-3.1.1.jar"/>
-	<classpathentry kind="lib" path="D:/JavaJars/apache-jena-3.1.1/lib/jena-core-3.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/JavaJars/apache-jena-3.1.1/lib/jena-core-3.1.1.jar" sourcepath="D:/JavaJars/apache-jena-3.1.1/lib-src/jena-core-3.1.1-sources.jar"/>
 	<classpathentry kind="lib" path="D:/JavaJars/apache-jena-3.1.1/lib/jena-iri-3.1.1.jar"/>
 	<classpathentry kind="lib" path="D:/JavaJars/apache-jena-3.1.1/lib/jena-shaded-guava-3.1.1.jar"/>
 	<classpathentry kind="lib" path="D:/JavaJars/apache-jena-3.1.1/lib/jena-tdb-3.1.1.jar"/>

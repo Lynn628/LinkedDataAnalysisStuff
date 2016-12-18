@@ -408,7 +408,7 @@ public class DatasetInfo {
 		// datasetInfo.init();
 		// for (OntClass i : list) {
 		// // System.out.println(i);
-		// List<Triple> c = datasetInfo.getConnectedRelationNotLiteral(i);
+		//List<Triple> c = datasetInfo.getConnectedRelationNotLiteral(i);
 		// for (Triple t : c) {
 		// System.out.println(t);
 		// }
