@@ -11,8 +11,9 @@ import java.util.Scanner;
 
 
 public class TimeEstimation {
-	public static void main(String[] args){
-		 DataProcess.ProcessAndStoreNumberedData();
+	public static void main(String[] args) throws IOException{
+	 //  DataProcess.ProcessAndStoreNumberedData();
+	   System.out.println("~~~~~~~~~~~In the main function~~~~~ ");
 		String filePathInput = "";
 				    //提交文件路径
 				    do {
@@ -21,13 +22,16 @@ public class TimeEstimation {
 				      Scanner sc = new Scanner(System.in);
 				      filePathInput = sc.nextLine();
 				    } while (!filePathValidation(filePathInput));
-				    //C:\Users\Lynn\Desktop\Academic\GraphX\DataSets\yagoFacts\test1.tsv
+				    //C:/Users/Lynn/Desktop/Academic/GraphX/DataSets/yagoFacts/test1.tsv
 				   String filePath = filePathInput.replace("\\", "/");
 
 				    String operationChoosed = "";
 				    //写成可变的集合Set，后期可以添加功能模块
 				   List operationList =  new ArrayList();
-				   
+				   operationList.add("1");
+				   operationList.add("2");
+				   operationList.add("3");
+				   operationList.add("4");
 				    do {
 				      //选择要进行的操作
 				      System.out.println("Please the operation number:" + "\n" +

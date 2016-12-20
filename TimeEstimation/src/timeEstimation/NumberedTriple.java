@@ -1,5 +1,5 @@
 package timeEstimation;
-import java.util.List;
+
 
 public class NumberedTriple {
 
@@ -27,8 +27,7 @@ public class NumberedTriple {
 	
 	@Override
 	public String toString() {
-	
-		return  subjectNo.toString() + " " + objectNo.toString() +"\n"; 
+		return  subjectNo.toString() + "  " + objectNo.toString();
 	}
 
 }
