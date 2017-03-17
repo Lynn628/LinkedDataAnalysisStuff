@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<!-- 一些常量的配置信息 -->
+<properties>
+	<!-- Sparql查询语句常量 -->
+	<!-- 获取Virtuoso中所有class的sparql语句 -->
+	<entry key="get.allclass.sparql">PREFIX
+		rdf: <![CDATA[
+
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+		]]>
+		SELECT distinct ?class
+		WHERE { ?s rdf:type ?class }</entry>
+
+	<!-- 获取Virtuoso中某个class下的所有instance的sparql语句 -->
+	<entry key="get.instancesByClass.sparql">PREFIX
+		rdf: <![CDATA[
+
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+		]]>
+		SELECT distinct ?instance
+		WHERE { ?instance rdf:type userParam }</entry>
+
+	<!-- 获取Virtuoso中某个subject下的所有链接关系(过滤宾语是literal的情况) -->
+	<entry key="get.subjectLinkage.notliteral.sparql">PREFIX
+		SELECT ?p ?o
+		WHERE { userParam ?p ?o FILTER(!isLiteral(?o))}</entry>
+		
+		<!-- 获取Virtuoso中某个subject下的所有链接关系(过滤宾语是非literal的情况) -->
+	<entry key="get.subjectLinkage.literal.sparql">PREFIX
+		SELECT ?p ?o
+		WHERE { userParam ?p ?o FILTER(isLiteral(?o))}</entry>
+
+	<!-- 查询图数据库相关Sparql语句集合 End -->
+
+	<!-- Virtuoso图数据库相关常量定义Begin -->
+	<!-- Virtuoso服务所在的地址 -->
+	<entry key="service.virtuoso.address">http://223.3.80.2</entry>
+	<!-- Virtuoso服务所在的端口 -->
+	<entry key="service.virtuoso.port">8890</entry>
+
+	<!-- Virtuoso用户名 -->
+	<entry key="service.virtuoso.username">dba</entry>
+
+	<!-- Virtuoso密码 -->
+	<entry key="service.virtuoso.password">dba</entry>
+
+</properties>

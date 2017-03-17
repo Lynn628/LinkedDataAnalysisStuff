@@ -4,17 +4,22 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import com.cse.utils.query.statistic.DatasetInfo;
 import com.cse.utils.query.statistic.bean.TripleString;
-
+/**
+ * 
+ * @author Lynn
+ * 提取出的triple只是一个类下面有连接关系的instance之间的，所以数目较少
+ * 
+ */
 public class DataProcess {
 	
 	public static void main(String[] args) throws IOException{
@@ -56,7 +61,8 @@ public class DataProcess {
 		allInstances.addAll(instenceOfClass);	
 		}
 		if( tripleOfClass != null){
-			System.out.println("~~~~~~~~Get all the triple~~~~~~~~\n" + tripleOfClass.toString());
+		//	System.out.println("~~~~~~~~Get all the triple~~~~~~~~\n" + tripleOfClass.toString());
+		System.out.println("the size of a triple of a class" + tripleOfClass.size()+"\n");
 		allTriples.addAll(tripleOfClass);
 		}
 	 }
@@ -93,17 +99,32 @@ public class DataProcess {
 	System.out.println("Prepare to build and numbered triple into file");
 	FileWriter writer1 = new FileWriter("D:/numberedTriple.txt",true);
     for(TripleString triple : allTriples){
-		Long subjectNo = (Long)numeredInstance.get(triple.getSubject());
+    	//System.out.println("the subject is" + allInstances.contains(triple.getSubject()) + " the object is" + allInstances.contains(triple.getObject()));
+    	System.out.println("whether the instanceSet contains this subject" + allInstances.contains(triple.getSubject()) +
+    			   "whether the instanceSet contains this object" + allInstances.contains(triple.getObject()));
+    	Long subjectNo = (Long)numeredInstance.get(triple.getSubject());
 		Long objectNo = (Long)numeredInstance.get(triple.getObject());
+		System.out.println("subjectNo is"+ subjectNo + " " + "objectNo is"+ objectNo);
+		  }
 		//生成triple的编号对
-	    NumberedTriple numberedTriple = new NumberedTriple(subjectNo, objectNo);
-	    System.out.println("New born numbered triple"+ numberedTriple.toString());
-	    writer1.write(numberedTriple.toString() + "\r\n");
-        writer1.flush();
-	    //numberedTriplesList.add(new NumberedTriple(subjectNo, objectNo));
-	}
+	    //NumberedTriple numberedTriple = new NumberedTriple(subjectNo, objectNo);
+	   // System.out.println("New born numbered triple"+ numberedTriple.getSubjectNo().toString() + " " + nu);
+	   // String inputStr = subjectNo.toString() + " " + objectNo.toString();
+	   // writer1.write(inputStr + "\r\n");
+       // writer1.flush();
+	   // numberedTriplesList.add(new NumberedTriple(subjectNo, objectNo));
+    FileWriter writer2 = new FileWriter("D:/numberedInstance.txt",false);
+    //遍历numberedInstance,将实例和编号写入文件中
+    Iterator iter = numeredInstance.entrySet().iterator();
+    while(iter.hasNext()){
+    	Entry entry = (Entry) iter.next();
+    	String key = (String)entry.getKey();
+    	Long value = (Long)entry.getValue();
+    	writer2.write(value + "  " + key + "\r\n");
+    	writer2.flush();
+    }
 	   writer1.close();
-	   // writer2.close();
+	   writer2.close();
 	} catch (IOException e1) {
 	    e1.printStackTrace();
 	}
