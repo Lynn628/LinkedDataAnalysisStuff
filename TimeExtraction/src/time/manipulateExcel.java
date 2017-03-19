@@ -1,10 +1,12 @@
 package time;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
 
-import jxl.Workbook;
+import org.apache.jena.rdf.model.Property;
+
 import jxl.write.Label;
 import jxl.write.WritableCellFormat;
 import jxl.write.WritableFont;
@@ -46,8 +48,8 @@ public class manipulateExcel {
 		   int tripleAmount, double timeCost, int colNum) throws IOException, RowsExceededException, WriteException{
 	   
 	   WritableSheet firstSheet = writeBook.getSheet("Sheet 1");
-	   System.out.println("************" + firstSheet.getCell(0, 0).getContents());
-	   System.out.println("Whether sheet is null"+ firstSheet == null);
+	   //System.out.println("************" + firstSheet.getCell(0, 0).getContents());
+	   //System.out.println("Whether sheet is null"+ firstSheet == null);
 	   WritableFont wf = new WritableFont(WritableFont.TIMES,10,WritableFont.NO_BOLD,true);
        WritableCellFormat wcf = new WritableCellFormat(wf);
 	   ArrayList<Label> columnList = new ArrayList<>();
@@ -67,6 +69,33 @@ public class manipulateExcel {
 			                                            " " + colNum);
    }
    
+   
+   public static void writeToExcel(WritableWorkbook writeBook, String srcFileName, String dstFileName, 
+		   int tripleAmount, HashSet<String> timeProperty, double timeCost, int colNum) throws IOException, RowsExceededException, WriteException{
+	   
+	   WritableSheet firstSheet = writeBook.getSheet("Sheet 1");
+	   //System.out.println("************" + firstSheet.getCell(0, 0).getContents());
+	   //System.out.println("Whether sheet is null"+ firstSheet == null);
+	   Iterator<String> iterator = timeProperty.iterator();
+	   String timePropertyStr = "";
+	   while(iterator.hasNext()){
+		   timePropertyStr += iterator.next().toString() + ";";
+	   }
+	   WritableFont wf = new WritableFont(WritableFont.TIMES,10,WritableFont.NO_BOLD,true);
+       WritableCellFormat wcf = new WritableCellFormat(wf);
+	   ArrayList<Label> columnList = new ArrayList<>();
+	   columnList.add(new Label(0, colNum, srcFileName, wcf));
+	   columnList.add(new Label(1, colNum, dstFileName, wcf));
+	   columnList.add(new Label(2, colNum, String.valueOf(tripleAmount), wcf));
+	   columnList.add(new Label(3, colNum, timePropertyStr, wcf));
+	   columnList.add(new Label(4, colNum, String.valueOf(timeCost), wcf));
+	   int size = columnList.size();
+	   for(int i = 0; i < size; i++){
+		 Label content = columnList.get(i);
+		 firstSheet.addCell(content);
+    }
+
+   }
    /*public static void main(String[] args) throws RowsExceededException, WriteException, IOException{
 	   WritableWorkbook writebook = createExcel();
 	   String srcPath = "AAAAAAAAAAAAA";
