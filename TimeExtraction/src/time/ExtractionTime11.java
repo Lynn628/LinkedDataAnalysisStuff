@@ -39,7 +39,7 @@ import jxl.write.biff.RowsExceededException;
  *   在10的基础上进行改进
  *     将多个数据集进行混合，抽取出其中的时间信息做标记，用List存储携带时间信息的property，计算每个property在携带时间信息的
  *     全局property出现的比重，以及对于每一property所携带时间信息占整个object比例的均值
- *     
+ *     操作Excel函数位于manipulateExcel2
  */
 public class ExtractionTime11 {
 //存储所有的timeProperty,property可重复
@@ -112,7 +112,7 @@ private HashMap<String, List<Double>> timePropertyTimeProportionList;
 		
 		  long t2 = System.currentTimeMillis();
 		  double timeCost = (t2 - t1)/1000.0;
-	      manipulateExcel2.writeToExcel(workbook, filePath, fileName, tripleNum, extractionObj.getTimePropertyList(), timeCost, i);
+	      ManipulateExcel2.writeToExcel(workbook, filePath, fileName, tripleNum, extractionObj.getTimePropertyList(), timeCost, i);
 	     // System.out.println("ExtractionObj.getTimePropertyList is empty?" + extractionObj.getTimePropertyList().isEmpty());
 	      bufferedWriter.close();
 		  }

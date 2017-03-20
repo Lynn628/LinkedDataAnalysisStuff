@@ -16,7 +16,7 @@ import jxl.write.WritableWorkbook;
 import jxl.write.WriteException;
 import jxl.write.biff.RowsExceededException;
 
-public class manipulateExcel2 {
+public class ManipulateExcel2 {
 	/**
 	 * 
 	 * @param writeBook
@@ -89,7 +89,11 @@ public class manipulateExcel2 {
 	    }
 
 	   }
-	   
+	   /**
+	    * 对携带时间Property的数据进行统计处理
+	    * @param timeProperty
+	    * @return
+	    */
 	   public static String timePropertyProcess(ArrayList<String> timeProperty){
            String timePropertyStr = "";
 		   

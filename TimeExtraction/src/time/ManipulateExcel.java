@@ -15,7 +15,7 @@ import jxl.write.WritableWorkbook;
 import jxl.write.WriteException;
 import jxl.write.biff.RowsExceededException;
 
-public class manipulateExcel {
+public class ManipulateExcel {
    //public static WritableWorkbook createExcel( ) throws IOException, RowsExceededException, WriteException{
 	   //创建工作簿（WritableWorkbook）对象，打开Excel文件，文件若不存在，则创建文件
 	  /* WritableWorkbook writeBook = Workbook.createWorkbook(new File("C://Users//Lynn//Desktop//Academic//LinkedDataProject//markedFile//fileCompare//A.xlsx"));

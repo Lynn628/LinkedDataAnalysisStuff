@@ -73,7 +73,7 @@ public class ExtractionTime9 {
 		  int tripleNum = new ExtractionTime9().timeExtraction(filePath, fileName, bufferedWriter);
 		  long t2 = System.currentTimeMillis();
 		  double timeCost = (t2 - t1)/1000.0;
-	      manipulateExcel.writeToExcel(workbook, filePath, fileName, tripleNum, timeCost, i);
+	      ManipulateExcel.writeToExcel(workbook, filePath, fileName, tripleNum, timeCost, i);
 	      
 	      bufferedWriter.close();
 		  }
