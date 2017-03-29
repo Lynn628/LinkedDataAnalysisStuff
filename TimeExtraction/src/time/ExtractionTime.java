@@ -16,7 +16,10 @@ import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.StmtIterator;
-import org.apache.jena.util.FileManager;	
+import org.apache.jena.util.FileManager;
+
+import util.ReadFilePath;
+import util.SUTimeTool;	
 
 public class ExtractionTime {
    

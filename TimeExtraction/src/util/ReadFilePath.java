@@ -1,4 +1,4 @@
-package time;
+package util;
 /**
  * 读取某个目录下面所有文件的文件名
  */

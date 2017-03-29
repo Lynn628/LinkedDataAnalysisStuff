@@ -1,4 +1,4 @@
-package time;
+package util;
 
 import java.util.List;
 import java.util.Properties;

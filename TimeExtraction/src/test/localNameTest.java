@@ -16,8 +16,8 @@ import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.util.FileManager;
 
-import time.ReadFilePath;
-import time.SUTimeTool;
+import util.ReadFilePath;
+import util.SUTimeTool;
 //C:\Users\Lynn\Desktop\Academic\LinkedDataProject\DataSet\SWCC\workshops\admire-2012-complete.rdf
 //C:\Users\Lynn\Desktop\Academic\LinkedDataProject\DataSet\SWCC\workshops\sdow-2008-complete.rdf    28kb
 /**

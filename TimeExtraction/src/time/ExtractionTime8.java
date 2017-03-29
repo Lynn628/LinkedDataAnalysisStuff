@@ -21,6 +21,8 @@ import org.apache.jena.util.FileManager;
 
 import edu.stanford.nlp.pipeline.AnnotationPipeline;
 import edu.stanford.nlp.util.CoreMap;
+import util.ReadFilePath;
+import util.SUTimeTool2;
 
 /**
  * 在ExtractionTime7的基础上加了个循环要求输入文件的功能
